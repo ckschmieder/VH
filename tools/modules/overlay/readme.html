@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h2 id="overlaymodule"># Overlay Module #</h2>
+
+<h1 id="info">Info</h1>
+
+<p>Developer: Tristan Marsh
+Crafted: Mar 7, 2016
+Version: 1.0</p>
+
+<h1 id="gettingstarted">Getting Started</h1>
+
+<p>In your _config.json file, include “overlay”: &#8220;1.0&#8221; under &quot;modules”. This will include the needed scss and js for the carousel to work. Read more to find out how to use it.</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<ol>
+<li>Carousel Module. If carousels are used, this module is required. Check Carousel Module for Carousel Dependencies.</li>
+<li>Video Module. If videos are used, this module is required. Check Video Module for Video Dependencies.</li>
+</ol>
+
+<h2 id="howitworks">How it Works</h2>
+
+<p>In your HTML, overlays are structured as such:</p>
+
+<pre><code>&lt;div class=&quot;*PASSED_CLASS*&quot; type=&quot;*&quot; carDur=&quot;*&quot; carEase=&quot;*&quot;&gt;
+    &lt;img src=&quot;*&quot; caption=&quot;*&quot;/&gt; &lt;-- FOR IMAGE
+    *&lt;img as above/&gt;* &lt;-- FOR CAROUSEL
+
+    &lt;img src=&quot;*&quot; type=&quot;*&quot; vidSrc=&quot;*&quot; controls=&quot;*&quot; autoplay=&quot;*&quot; mime=&quot;*&quot; caption=&quot;*&quot;/&gt; &lt;-- FOR VIDEO
+
+    &lt;div class=&quot;*NAMESPACE*-image-expand&quot;&gt;
+        *EXPAND HTML*
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>All objects which match the passed class are parsed. Objects can have these options:
+ type : Currently, types are &#8220;carousel&#8221;, &#8220;video&#8221; and &#8220;single&#8221;. Defaults to &#8220;single&#8221;;
+ carDur : For &#8220;carousel&#8221; type overlays, duration of animation/transition in seconds. Passed to carousel creation.
+ carEase : For &#8220;carousel&#8221; type overlays, easing. Passed to carousel creation.</p>
+
+<p>Children <img> tags of the main object will be made into overlay items. Frame children can have these options:
+ src : Source for item image. For &#8220;single&#8221; type overlays, it will be both the overlay image and the item image.
+ caption : Caption for overlay. For &#8220;carousel&#8221; type overlays, this will be passed to carousel creation.</p>
+
+<p>For &#8220;Video&#8221; type carousels, other items are available.
+ type : REQUIRED. Can be &#8220;youtube&#8221; or &#8220;video&#8221;.
+ controls : Passed to Video creation, and to be used as video module.
+ autoplay: True/False. If true, on expand the video plays. Defaults to &#8220;false&#8221;.
+ mime: If video type, mime of video.</p>
+
+<p>Lastly, the final div should have class ofNAMESPACE<em>-image-expand.EXPAND HTML</em> can be any html to diplay as CTA.</p>
+
+<p>It is called by:</p>
+
+<pre><code>window[GLOBAL_NAMESPACE].overlay.init(‘*PASSED_CLASS*’);
+</code></pre>
+
+<h2 id="versions">Versions</h2>
+
+<p>1.0 - Initial Version. Hopefully there’s nothing too broken.</p>
+
+</body>
+</html>

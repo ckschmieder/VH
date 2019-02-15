@@ -1,0 +1,144 @@
+.test {
+	font-size: 1em;
+}
+
+/*---------------------------
+ * Collections Product Nav 
+ ---------------------------*/
+nav.collections-product-nav {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 40px 0;
+}
+nav.collections-product-nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav.collections-product-nav ul li {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+nav.collections-product-nav ul li {
+  display: block;
+  font-size: 0.75em;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.175em;
+  line-height: 2em;
+  margin: 1em 1.5em;
+}
+nav.collections-product-nav ul li a {
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.325s ease-in-out;
+  outline: none;
+}
+@media screen and (min-width: 560px) {
+  nav.collections-product-nav ul li {
+    display: inline-block;
+  }
+}
+
+div[filter="furniture"] .category-item.rugs,
+div[filter="furniture"] .category-item.textiles {
+	display: none!important;
+}
+
+div[filter="rugs"] .category-item.furniture,
+div[filter="rugs"] .category-item.textiles,
+div[filter="rugs"] .category-item.casegoods,
+div[filter="rugs"] .category-item.upholstery {
+	display: none!important;
+}
+
+div[filter="textiles"] .category-item.furniture,
+div[filter="textiles"] .category-item.rugs,
+div[filter="textiles"] .category-item.casegoods,
+div[filter="textiles"] .category-item.upholstery {
+	display: none!important;
+}
+
+
+div[filter="furniture"] .category-item.furniture,
+div[filter="furniture"] .category-item.casegoods,
+div[filter="furniture"] .category-item.upholstery {
+	display: inline-block!important;
+}
+
+div[filter="rugs"] .category-item.rugs {
+	display: inline-block!important;
+}
+
+div[filter="textiles"] .category-item.textiles {
+	display: inline-block!important;
+}
+
+
+/*----------------------------------
+ * Portfilio Slider Customizations 
+ ----------------------------------*/
+.vh-carousel-btn.vh-carousel-btn-l {
+    position: absolute;
+    left: 0!important;
+}
+
+.vh-carousel-btn.vh-carousel-btn-r {
+    position: absolute;
+    right: 0!important;
+    left: initial!important
+}
+
+.vh-carousel-btn {
+    top: 46%!important;
+    background-color: rgba(0, 0, 0, 0.65)!important;
+    height: 80px!important;
+    background-position: center!important;
+    transition: background-color .15s ease-in-out;
+}
+.vh-carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.88)!important;
+}
+
+/* Collections homepage product category grid layout update */
+.wrapper .main-content .template-content .row .browse-cat-block h3 {
+	font-size: 16pt;
+	font-weight: 400;
+}
+
+.wrapper .main-content .template-content .row .browse-cat-block .quad-cat.casegoods {
+    background-position: 30% top;
+}
+
+@media screen and (min-width: 700px) {
+	.cat-flex-wrap {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-orient: horizontal;
+	    -webkit-box-direction: normal;
+	        -ms-flex-flow: row nowrap;
+	            flex-flow: row nowrap;
+	    -webkit-box-pack: justify;
+	        -ms-flex-pack: justify;
+	            justify-content: space-between;
+	}
+}
+.cat-flex-wrap > a {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 32%;
+            flex: 0 0 32%;
+    display: block;
+}
+.wrapper .main-content .template-content .row .browse-cat-block .quad-cat {
+    width: 100%;
+}
+.wrapper .main-content .template-content .row .browse-cat-block .quad-cat p {
+    font-size: 32px;
+}
+.wrapper .main-content .template-content .row .browse-cat-block {
+    padding: 0;
+    max-width: 1050px;
+    margin: 0 auto;
+}

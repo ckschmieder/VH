@@ -1,0 +1,42 @@
+.wrapper .main-content .template-content .row .portfolio-spotlight-block .text .holder {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    float: none!important;
+    /* margin-bottom: 100px; */
+    /* margin-top: 25px; */
+}
+
+.portfolio-spotlight-block .holder a {
+    flex: 1 1 400px;
+    margin: 20px 20px;
+}
+
+.wrapper .main-content .template-content .row .text p {
+    /* font-weight: 400; */
+}
+
+.wrapper .main-content .template-content .row .portfolio-spotlight-block .text .holder .item .image {
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+
+.wrapper .main-content .template-content .row .text p {
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0!important;
+    background: rgba(48, 60, 66, 0.8)!important;
+}
+
+.wrapper .main-content .template-content .row .portfolio-spotlight-block .text {
+    padding-bottom: 45px;
+}
+
+
+.item {}
+
+.wrapper .main-content .template-content .row .portfolio-spotlight-block .text .holder .item {
+    box-shadow: 0px 0px 15px 0px;
+    box-shadow: 0px 0px 15px 0px #9a9a9a;
+}

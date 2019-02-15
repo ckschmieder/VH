@@ -1,0 +1,119 @@
+.#{$ns}overlay {
+    position: relative;
+    overflow: hidden;
+    img {
+	    width: 100%;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	    z-index: 0;
+    }
+    img:first-of-type {
+    	z-index: 10;
+    }
+    .#{$ns}overlay-expand {
+	    background: red;
+	    color: white;
+	    position: absolute;
+	    bottom: 0px;
+	    padding: 10px;
+	    text-transform: uppercase;
+	    cursor: pointer;
+	    z-index: 11;
+	    img {
+		    width: auto;
+		    display: inline-block;
+		    position: relative;
+		    top: auto;
+		    left: auto;
+		    transform: none;
+		    vertical-align: middle;
+		    margin: 0 10px 0 0;
+	    }
+	}
+}
+.#{$ns}overlay-overlay {
+	width: 100%;
+	height: 0%;
+	position: fixed;
+	z-index: 9999;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	background: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity .7s ease;
+    &.#{$ns}overlay-overlay-show {
+		height: 101%;
+	    opacity: 1;
+    	&.#{$ns}overlay-overlay-fade {
+	    	opacity: 0;
+    	}
+	    .#{$ns}overlay-item.#{$ns}overlay-overlay-item-show {
+	    	display: block;
+	    }
+    }
+	.#{$ns}overlay-overlay-close {
+	    position: absolute;
+	    right: 20px;
+	    top: 20px;
+	    color: white;
+	    cursor: pointer;
+        z-index: 9999;
+	}
+	.#{$ns}overlay-item {
+	    width: 90%;
+	    height: 70%;
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
+	    display: none;
+	    .#{$ns}overlay-item-image {
+		    width: 100%;
+		    height: 100%;
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		    background-size: contain;
+		}
+	    .#{$ns}overlay-item-caption {
+		    color: white;
+		    padding: 10px 30%;
+		    text-align: center;
+		    position: absolute;
+		    width: 40%;
+		    top: 100%;
+		}
+		&.#{$ns}overlay-carousel {
+		
+			.#{$ns}carousel-btn.#{$ns}carousel-btn-r {
+			    left: initial;
+			}
+		
+			.#{$ns}carousel-item .#{$ns}carousel-image{
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+			
+		}
+		.#{$ns}overlay-video {
+			height: 100%;
+			video {
+		    	height: 100%;
+			}
+		}
+		.#{$ns}video .#{$ns}youtube {
+		    height: 100%;
+		    width: 50%;
+		    display: block;
+		    margin: auto;
+		}
+	}
+}
+
+.#{$ns}overlay-example {
+    width: 25%;
+    height: 150px;
+    margin: 50px auto 50px;
+}

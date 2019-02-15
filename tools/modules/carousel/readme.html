@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h2 id="carouselmodule"># Carousel Module #</h2>
+
+<h1 id="info">Info</h1>
+
+<p>Developer: Tristan Marsh, Seth Wieder
+Crafted: Mar 1, 2016
+Version: 1.0</p>
+
+<h1 id="gettingstarted">Getting Started</h1>
+
+<p>In your _config.json file, include &#8220;carousel&#8221;: &#8220;1.0&#8221; under &quot;modules”. This will include the needed scss and js for the carousel to work. Read more to find out how to use it.</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<ol>
+<li>None. It’s all Javascript and CSS baby, and you’re already running with that, right?</li>
+</ol>
+
+<h2 id="howitworks">How it Works</h2>
+
+<p>In your HTML, carousels are structured as such:</p>
+
+<pre><code>&lt;div class=“*NAMESPACE*-carousel *PASSED_CLASS*&quot; frameWidth=&quot;*&quot; easing=&quot;*&quot; durationInSeconds=&quot;*&quot; type=&quot;*&quot; *breadcrumbs*&gt;
+    &lt;div link=&quot;*&quot; image=&quot;*&quot;&gt;*HTML FOR CAPTION/OVERLAY*&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>And the code is called through</p>
+
+<pre><code>window[GLOBAL_NAMESPACE].carousel.init(‘*PASSED_CLASS*’);
+</code></pre>
+
+<p>The passed class could be <em>NAMESPACE</em>-carousel if you wanted, as all carousels should have that class. Passed_class should NOT include selector. No periods or hashes, please. When called, the code builds and adds functionality to your carousels based on the options included in your HTML. These options are:</p>
+
+<pre><code>type : Currently, types are &quot;slider&quot; and &quot;crossfade&quot;. Defaults to &quot;slider&quot;;
+frameWidth : For &quot;Slider&quot; type carousels, how wide the frames are based as percentage of container width. Integers, between 0 and 100, only. No “%” needed. Defaults to 75.
+easing : Easing. Currently, options are :
+    &quot;ease&quot;
+    &quot;linear&quot;
+    &quot;ease-in&quot;
+    &quot;ease-out&quot;
+    &quot;ease-in-out&quot;
+    &quot;step-start&quot;
+    &quot;step-end&quot;
+    Default and unknown easing filters to &quot;linear&quot;.
+durationInSeconds : duration of animation/transition in seconds. Integers only. Defaults to 1.
+</code></pre>
+
+<p>Every child of the main carousel object will be made into frames for the carousel. In the above HTML example, this is the frame child:</p>
+
+<pre><code>&lt;div link=&quot;*&quot; image=&quot;*&quot;&gt;*HTML FOR CAPTION/OVERLAY*&lt;/div&gt;
+</code></pre>
+
+<p>Frame children can have these options:</p>
+
+<pre><code>link : frame link. Will not be included if not used. URLs.
+target : blank or self. Defaults to &quot;self&quot;.
+image : main image.
+</code></pre>
+
+<p>The inner html of the Frame child will be made into a caption overlay. All HTML tags are welcome!</p>
+
+<p>Once window[GLOBAL_NAMESPACE].carousel.init has been called, feel free to call it again should new carousels need to be created. It will not double up and cause errors. So, let’s say you have a carousel classed .myCarousel that you’ve initialized. Lets now say you pull new code through ajax, and it includes another .myCarousel. Running window[GLOBAL_NAMESPACE].carousel.init(‘myCarousel’) will skip your already built carousel and only create the new one.</p>
+
+<h2 id="versions">Versions</h2>
+
+<p>1.0 - Initial Version. Hopefully there’s nothing too broken.</p>
+
+</body>
+</html>

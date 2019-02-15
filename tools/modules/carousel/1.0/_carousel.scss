@@ -1,0 +1,155 @@
+.#{$ns}carousel {
+	position:relative;
+	width: 100%;
+	height: 50vw;
+	overflow: hidden;
+	.#{$ns}carousel-btn {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+		width: 10%;
+		background: rgba(255,0,0,0.81);
+		border: none;
+		cursor: pointer;
+		z-index: 10;
+		&.#{$ns}carousel-btn-r {
+		    left: inherit;
+			right: 0px;
+		}
+	}
+	.#{$ns}carousel-dots {
+		position: absolute;
+		bottom: 10px;
+		left: 15%;
+		z-index: 10;
+		.#{$ns}carousel-dot {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin: 10px;
+			background: white;
+			cursor: pointer;
+			&.#{$ns}active {
+				background: blue;
+			}
+		}
+	}
+	.#{$ns}slider {
+	    height: 100%;
+	    position: absolute;
+	    left: 50%;
+	    background: black;
+		.#{$ns}carousel-item {
+		    position: relative;
+		    display: inline-block;
+		    height: 100%;
+		    background: #7e7e7e;
+		    overflow: hidden;
+		    opacity: .7;
+		    transition: inherit;
+			&.#{$ns}active {
+			   opacity: 1;
+				.#{$ns}carousel-item-caption {
+					opacity: 1;
+				}
+			}
+			.#{$ns}carousel-image {
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center center;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.#{$ns}carousel-item-caption{
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				padding: 20px 25%;
+				background: red;
+				width: 50%;
+				text-align: center;
+				opacity: 0;
+			    transition: inherit;
+			}
+		}
+	}
+	&.#{$ns}crossfade {
+		.#{$ns}carousel-item {
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    top: 0;
+		    z-index: 0;
+		    opacity: 0;
+		    animation-duration: inherit;
+		    animation-timing-function: inherit;
+		    animation-fill-mode: forwards;
+		    animation-iteration-count: 1;
+		    animation-delay: 0s;
+		    &.#{$ns}active,
+			&.#{$ns}prev,
+			&.#{$ns}next {
+			    opacity: 1;
+			    z-index: 1;
+			}
+
+			&.#{$ns}prev {
+			    animation-name: #{$ns}slideLeftOut;
+			}
+			&.#{$ns}active.#{$ns}next {
+			    animation-name: #{$ns}slideRightIn;
+			}
+
+			&.#{$ns}prev.#{$ns}active {
+			    animation-name: #{$ns}slideLeftIn;
+			}
+			&.#{$ns}next {
+			    animation-name: #{$ns}slideRightOut;
+			}
+			
+			.#{$ns}carousel-image {
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center center;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.#{$ns}carousel-item-caption{
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				padding: 20px 25%;
+				background: red;
+				width: 50%;
+				text-align: center;
+			}
+		}
+	}
+}
+
+/* slide("_R") */
+@keyframes #{$ns}slideLeftOut {
+    0%   { opacity: 1; transform: translateX(0%);}
+    100% { opacity: 0; transform: translateX(-10%);}
+} 
+@keyframes #{$ns}slideRightIn {
+    0%   { opacity: 0; transform: translateX(10%);}
+    100% { opacity: 1; transform: translateX(0%);}
+} 
+
+/* slide("_L") */
+@keyframes #{$ns}slideRightOut {
+    0%   { opacity: 1; transform: translateX(0%);}
+    100% { opacity: 0; transform: translateX(10%);}
+} 
+@keyframes #{$ns}slideLeftIn {
+    0%   { opacity: 0; transform: translateX(-10%);}
+    100% { opacity: 1; transform: translateX(0%);}
+} 
