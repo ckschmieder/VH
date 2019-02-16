@@ -19,44 +19,30 @@ get_header(); ?>
 		</div>
 	
 		<div class="row">
-			<div class="product-search">
+			<!-- <div class="product-search">
 				
-			</div>
+			</div> -->
 			
 			<div class="category-block">
-				<div class="category-selector">category
+				<!-- <div class="category-selector">category
 					<select>
-					  <!-- <option value="all">All</option> -->
+					  <option value="all">All</option>
 					  <option value="furniture">Furniture</option>
-					  <!-- <option value="casegoods">Casegoods</option> -->
-					  <!-- <option value="upholstery">Upholstery</option> -->
+					  <option value="casegoods">Casegoods</option>
+					  <option value="upholstery">Upholstery</option>
 					  <option value="textiles">Textiles</option>
 					  <option value="rugs">Rugs</option>
 					</select>
-					<!-- <div class="category-block cat-list">
-						<div value="furniture">Furniture</div>
-						<div value="textiles">Textiles</div>
-						<div value="rugs">Rugs</div>
-					</div> -->
-				</div>
+				</div> -->
 
-				<nav class="collections-product-nav category-selector" style="display:none;">
-					<ul>
-						<li>
-							<a class="" href="" cat="furniture" value="furniture">Furniture</a>
-						</li>
-						
-						<li>
-							<a class="" href="" cat="rugs" value="rugs">Rugs</a>
-						</li>
-						<li>
-							<a class="" href="" cat="textiles" value="textiles">Textiles</a>
-						</li>
-					</ul>
+				<nav class="collections-product-nav category-selector">
+					<div class="furniture" value="furniture">Furniture</div>
+					<div class="rugs" value="rugs">Rugs</div>
+					<div class="textiles" value="textiles">Textiles</div>
 				</nav>
 
 				<!--<div class="category-list display rand"></div>-->
-				<div class="category-list display alph"></div>
+				<div class="category-list furniture alph"></div>
 				<div class="loading"></div>
 			</div>
 

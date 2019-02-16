@@ -23,16 +23,16 @@ get_header(); ?>
 			<div class="browse-cat-block">
 				<h3>Browse By Category</h3>
 				<div class="cat-flex-wrap">
-					<a href="<?php echo get_permalink(40); ?>?c=casegoods"><div class="quad-cat casegoods" style="background-image: url(<?php echo get_field('casegoods_image')['sizes']['large']; ?>)">
+					<a href="<?php echo get_permalink(40); ?>#furniture"><div class="quad-cat casegoods" style="background-image: url(<?php echo get_field('casegoods_image')['sizes']['large']; ?>)">
 						<p>furniture</p>
 					</div></a>
 					<!-- <a href="<?php echo get_permalink(40); ?>?c=upholstery"><div class="quad-cat upholstery" style="background-image: url(<?php echo get_field('upholstery_image')['sizes']['large']; ?>)">
 						<p>upholstery</p>
 					</div></a> -->
-					<a href="<?php echo get_permalink(40); ?>?c=textiles"><div class="quad-cat textiles" style="background-image: url(<?php echo get_field('textiles_image')['sizes']['large']; ?>)">
+					<a href="<?php echo get_permalink(40); ?>#textiles"><div class="quad-cat textiles" style="background-image: url(<?php echo get_field('textiles_image')['sizes']['large']; ?>)">
 						<p>textiles</p>
 					</div></a>
-					<a href="<?php echo get_permalink(40); ?>?c=rugs"><div class="quad-cat rugs" style="background-image: url(<?php echo get_field('rugs_image')['sizes']['large']; ?>)">
+					<a href="<?php echo get_permalink(40); ?>#rugs"><div class="quad-cat rugs" style="background-image: url(<?php echo get_field('rugs_image')['sizes']['large']; ?>)">
 						<p>rugs</p>
 					</div></a>
 				</div>
