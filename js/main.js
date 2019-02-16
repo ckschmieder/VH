@@ -5089,6 +5089,12 @@ window[GLOBAL_NAMESPACE] = {}, window[GLOBAL_NAMESPACE].scrollable = [], window[
 var map, markers = [],
     infowindows = [];
 
+
+$(document).ready(function(){
+  $('.slick-slider').slick({
+  });
+});
+
 /*jQuery(".collections-product-nav a").click(function() {
     event.preventDefault();
     var filteredcat = jQuery(this).attr("cat");
