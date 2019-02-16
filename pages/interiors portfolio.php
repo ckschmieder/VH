@@ -23,7 +23,7 @@ get_header(); ?>
 					$images = get_field('images');
 					?>
 					<a id="port1"></a>
-						<div class="carousel-block">
+						<div id="" class="carousel-block">
 							<div class="vh-carousel" frameWidth="100" easing="ease" durationInSeconds="1" type="crossfade">
 								<?php $it = 1; foreach ( $images as $image ) { ?>
 									<div image="<?php echo $image['sizes']['large']; ?>">

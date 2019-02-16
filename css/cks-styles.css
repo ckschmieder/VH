@@ -96,29 +96,37 @@ div[filter="textiles"] .category-item.textiles {
 
 
 /*----------------------------------
- * Portfilio Slider Customizations 
+ * Slider Customizations
  ----------------------------------*/
+
+.vh-carousel-btn {
+    position: absolute!important;
+    top: 50%!important;
+    transform: perspective(1px) translateY(-50%)!important;
+    height: 180px!important;
+    width: 4.5%!important;
+    min-width: 35px!important;
+    background-image: url(../images/vh-slider-arrow-dark-2-opt.png)!important;
+    background-color: rgba(0, 0, 0, 0.0)!important;
+    background-size: contain!important;
+    transition: background-color .3s ease-in-out;
+    margin: 0!important;
+}
+
+.vh-carousel:hover .vh-carousel-btn {
+    background-color: rgba(0, 0, 0, 0.2)!important;
+}
+
 .vh-carousel-btn.vh-carousel-btn-l {
-    position: absolute;
     left: 0!important;
+    transform: perspective(1px) translateY(-50%) scaleX(-1)!important;
 }
 
 .vh-carousel-btn.vh-carousel-btn-r {
-    position: absolute;
     right: 0!important;
-    left: initial!important
+    left: initial!important;
 }
 
-.vh-carousel-btn {
-    top: 46%!important;
-    background-color: rgba(0, 0, 0, 0.65)!important;
-    height: 80px!important;
-    background-position: center!important;
-    transition: background-color .15s ease-in-out;
-}
-.vh-carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.88)!important;
-}
 
 /* Collections homepage product category grid layout update */
 .wrapper .main-content .template-content .row .browse-cat-block h3 {
@@ -160,4 +168,54 @@ div[filter="textiles"] .category-item.textiles {
     padding: 0;
     max-width: 1050px;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+.page-template-collectionsgallery .wrapper .main-content .template-content .row .carousel-block .vh-carousel.vh-crossfade, .parent-pageid-20.page-template-interiorsportfolio .wrapper .main-content .template-content .row .carousel-block .vh-carousel.vh-crossfade {
+  height: 325px;
+}
+}
+
+/*.swipe {
+  overflow: hidden!important!important;
+  visibility: hidden!important;
+  position: relative!important;
+}
+.swipe-wrap {
+  overflow: hidden!important;
+  position: relative!important;
+}
+.swipe-wrap > div {
+  float:left!important;
+  width:100%!important;
+  position: relative!important;
+}*/
+
+
+.vh-carousel {
+  /*position:absolute;*/
+  height:100%;
+  width:100%;
+  /*background: linear-gradient(bottom, #000, #666);
+  background: -o-linear-gradient(bottom, #000, #666);
+  background: -moz-linear-gradient(bottom, #000, #666);
+  background: -webkit-linear-gradient(bottom, #000, #666);
+  background: -ms-linear-gradient(bottom, #000, #666);
+  color:#fff;*/
+  overflow:hidden;
+}
+
+.vh-carousel .vh-carousel-item {
+  width:100%;
+  height:100%;
+  position:absolute;
+  padding:36px;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box; /* Firefox */
+  -webkit-box-sizing:border-box; /* Safari */
+  /*visibility:hidden;*/
+}
+
+.vh-carousel .vh-carousel-item.active {
+  visibility:visible;
 }

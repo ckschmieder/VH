@@ -49,6 +49,7 @@
 	</body>
 		
 		<!-- <script src="<?php echo get_template_directory_uri() ?>/js/main.min.js"></script> -->
+		<script src="<?php echo get_template_directory_uri() ?>/js/jquery.touchSwipe.min.js"></script>
 		<script src="<?php echo get_template_directory_uri() ?>/js/main.js"></script>
 		<?php if ($post->ID == 42 || $post->post_name == "find-a-showroom"){ ?>
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9t3SEdboTy7PNyPbvqpBzL4uPrHiFHOE&callback=initMap"
