@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Collections Gallery
+ * Template Name: Collections Gallery Slider Test
  */
 
 get_header(); ?>
@@ -8,18 +8,6 @@ get_header(); ?>
 	<article class="template-content furn">
 	
 		<div class="row nopaddtop">
-
-			<!-- <div class="slick-carousel-gallery">
-				<?php
-					$frames = get_field('furniture_gallery');
-					$i = 1;
-					$c = count($frames);
-					if($c < 10){$c = "0".$c;}
-					foreach ( $frames as $frame ) {
-				?>
-				<div class="slick-slide"><img src="<?php echo $frame['image']['sizes']['large']; ?>"></div>
-				<?php $i++; } ?>
-			</div> -->
 	
 			<div class="row">
 				
@@ -34,7 +22,7 @@ get_header(); ?>
 						?>
 							<div image="<?php echo $frame['image']['sizes']['large']; ?>">
 								<div class="text">
-									<!-- <h4>Furniture Gallery</h4> -->
+									<h4>Furniture Gallery</h4>
 									<h2><?php echo $frame['item_name']; ?></h2>
 									<a href="<?php echo $frame['product_link']; ?>"><h4>view product</h4></a>
 									<div class="numbers">
@@ -48,10 +36,20 @@ get_header(); ?>
 					</div>
 				</div>
 
+				<!-- <div class="slick-carousel-gallery">
+					<?php
+						$frames = get_field('furniture_gallery');
+						$i = 1;
+						$c = count($frames);
+						if($c < 10){$c = "0".$c;}
+						foreach ( $frames as $frame ) {
+					?>
+					<div image="<?php echo $frame['image']['sizes']['large']; ?>"></div>
+					<?php $i++; } ?>
+				</div> -->
+				  
 				
-
-				
-				<!-- <div class="carousel-block rug">
+				<div class="carousel-block rug">
 					<div class="vh-carousel" frameWidth="100" easing="ease" durationInSeconds="1" type="crossfade">
 						<?php
 							$frames = get_field('rug_gallery');
@@ -62,7 +60,7 @@ get_header(); ?>
 						?>
 							<div image="<?php echo $frame['image']['sizes']['large']; ?>">
 								<div class="text">
-									<<h4>Rug Gallery</h4>
+									<!--<h4>Rug Gallery</h4>-->
 									<h2><?php echo $frame['item_name']; ?></h2>
 									<a href="<?php echo $frame['product_link']; ?>"><h4>view product</h4></a>
 									<div class="numbers">
@@ -74,7 +72,7 @@ get_header(); ?>
 							</div>
 						<?php } ?>
 					</div>
-				</div> -->
+				</div>
 				
 			</div>
 			

@@ -21,8 +21,11 @@
 		<title><?php echo get_bloginfo('name'); ?> | <?php echo $page_title; ?></title>
     	<meta property="dw:responsive:mobile" content="true" />		
 		<?php if ($post->post_type != "portfolio"){ ?>
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/slick-theme.css" />
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/slick.css" />
+
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
+			<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/slick.css" /> -->
+			<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/slick-theme.css" /> -->
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/master.css" />
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/cks-styles.css" />
 		<?php } ?>

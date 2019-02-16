@@ -12,6 +12,16 @@ add_theme_support( 'post-thumbnails' );
 }
 add_action( 'wp_enqueue_scripts', 'my_assets' );*/
 
+/*function load_my_script(){
+    wp_register_script( 
+        'slick-carousel', 
+        get_template_directory_uri() . '/js/slick.js', 
+        array( 'jquery' )
+    );
+    wp_enqueue_script( 'slick-carousel' );
+}
+add_action('wp_enqueue_scripts', 'load_my_script');*/
+
 /*function add_jquery_ui() {
     wp_enqueue_script( 'jquery-ui-core' );
     wp_enqueue_script( 'jquery-ui-widget' );
