@@ -219,3 +219,16 @@ div[filter="textiles"] .category-item.textiles {
 .vh-carousel .vh-carousel-item.active {
   visibility:visible;
 }
+
+/* Search Results page */
+
+.search-page-title {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 0;
+    margin: .5rem;
+    font-family: 'TextaAlt', sans-serif;
+}
+.search-term {
+  font-style: italic;
+}

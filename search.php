@@ -1,12 +1,14 @@
 <?php 
 /**
+ * The template for displaying product search results.
+ *
  */
 
 get_header(); ?>
 
 	<article class="template-content">
 	
-		<div class="row nopaddtop">
+		<!-- <div class="row nopaddtop">
 			<?php if(get_field('hero_image') != 0) { ?>
 			<div class="hero-block" style="background-image: url(<?php echo get_field('hero_image')['url']; ?>)">
 				<div class="cta">
@@ -16,8 +18,9 @@ get_header(); ?>
 			<?php }; ?>
 			
 		</div>
-
+ -->
 		<div class="row">
+			<h1 class="page-title search-page-title"><?php printf( esc_html__( 'Search Results for: %s' ), '<span class="search-term">"' . get_search_query() . '"</span>' ); ?></h1>
 			
 			<div class="category-block">
 	
@@ -28,6 +31,8 @@ get_header(); ?>
 		.wrapper .main-content .template-content .row .category-block .category-list .category-item .image -->
 
 		<div class="search-page-form" id="ss-search-page-form"><?php get_search_form(); ?></div>
+
+		<div></div>
 
 		<div class="category-list display alph">
 		 
