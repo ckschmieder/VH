@@ -34,7 +34,7 @@ get_header(); ?>
 
 		<div></div>
 
-		<!-- <div class="category-list display alph">
+		<div class="category-list display alph">
 		 
 	        <?php if ( have_posts() ) : ?>
 	 
@@ -64,9 +64,9 @@ get_header(); ?>
 	 
 	        <?php endif; ?>
 
-	    </div> -->
+	    </div>
 
-	    <div class="category-list display alph two">
+	    <!-- <div class="category-list display alph two">
 		 
 	        <?php
 
@@ -99,7 +99,7 @@ get_header(); ?>
 
 	        ?>
 
-	    </div>
+	    </div> -->
 
 	
 		<div class="row last-row">
