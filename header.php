@@ -130,7 +130,7 @@ src="https://www.facebook.com/tr?id=190392041685677&ev=PageView
 				</header>
 
 
-			} <?php } else { ?>
+			<?php } else { ?>
 
 				<header class="header">
 				

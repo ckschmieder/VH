@@ -34,7 +34,7 @@ get_header(); ?>
 
 		<div></div>
 
-		<div class="category-list display alph">
+		<!-- <div class="category-list display alph">
 		 
 	        <?php if ( have_posts() ) : ?>
 	 
@@ -51,10 +51,6 @@ get_header(); ?>
 	            	<p><?php the_title(); ?></p>
 	            	</a>
 	            </div>
-
-	           <!--  <span class="search-post-title"><?php the_title(); ?></span>
-	            <span class="search-post-excerpt"><?php the_excerpt(); ?></span>
-	            <span class="search-post-link"><a href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a></span> -->
 	 
 	            <?php endwhile; ?>
 	 
@@ -67,6 +63,41 @@ get_header(); ?>
 	            <?php //get_template_part( 'template-parts/content', 'none' ); ?>
 	 
 	        <?php endif; ?>
+
+	    </div> -->
+
+	    <div class="category-list display alph two">
+		 
+	        <?php
+
+	        if( isset( $_REQUEST['search'] ) ){
+	            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	            $args = array(
+	                'paged'           => $paged,
+	                'posts_per_page'  => 16, //or any number
+	                'post_type'       => 'products', //or your custom post type if needed
+	                's'               => $_REQUEST[ 'search' ]
+	            );
+	        }
+
+	        // The Query
+	        $the_query = new WP_Query( $args );
+
+	        // The Loop
+	        if ( $the_query->have_posts() ) {
+	        	echo '<ul>';
+	        	while ( $the_query->have_posts() ) {
+	        		$the_query->the_post();
+	        		echo '<li>' . get_the_title() . '</li>';
+	        	}
+	        	echo '</ul>';
+	        	/* Restore original Post Data */
+	        	wp_reset_postdata();
+	        } else {
+	        	// no posts found
+	        }
+
+	        ?>
 
 	    </div>
 
