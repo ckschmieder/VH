@@ -235,7 +235,8 @@ h1.search-page-title {
 }
 
 /* Search Form */
-.search-page-form {
+.search-page-form,
+.product-search {
     text-align: center;
-    margin: 1.4rem;
+    margin: 30px 0;
 }

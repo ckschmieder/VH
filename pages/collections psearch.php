@@ -24,23 +24,15 @@ get_header(); ?>
 			</div>
 			
 			<div class="category-block">
-				<div class="category-selector">category
-					<select>
-					  <!-- <option value="all">All</option> -->
+				<!-- <div class="category-selector">category
+					<select>					  
 					  <option value="furniture">Furniture</option>
-					  <!-- <option value="casegoods">Casegoods</option> -->
-					  <!-- <option value="upholstery">Upholstery</option> -->
 					  <option value="textiles">Textiles</option>
 					  <option value="rugs">Rugs</option>
 					</select>
-					<!-- <div class="category-block cat-list">
-						<div value="furniture">Furniture</div>
-						<div value="textiles">Textiles</div>
-						<div value="rugs">Rugs</div>
-					</div> -->
 				</div>
-
-				<nav class="collections-product-nav" style="display:none;">
+ -->
+				<!-- <nav class="collections-product-nav" style="display:none;">
 					<ul>
 						<li>
 							<a class="" href="" cat="furniture">Furniture</a>
@@ -53,7 +45,7 @@ get_header(); ?>
 							<a class="" href="" cat="textiles">Textiles</a>
 						</li>
 					</ul>
-				</nav>
+				</nav> -->
 
 				<!--<div class="category-list display rand"></div>-->
 				<div class="category-list display alph"></div>

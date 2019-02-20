@@ -157,5 +157,22 @@ function products_custom_column ( $column, $post_id ) {
  }
  add_action ( 'manage_products_posts_custom_column', 'products_custom_column', 10, 2 );
 
+
+ /*
+ * Nice Search plugin to update url of search results
+ */
+/*function cws_nice_search_redirect() {
+    global $wp_rewrite;
+    if ( !isset( $wp_rewrite ) || !is_object( $wp_rewrite ) || !$wp_rewrite->using_permalinks() )
+        return;
+
+    $search_base = $wp_rewrite->search_base;
+    if ( is_search() && !is_admin() && strpos( $_SERVER['REQUEST_URI'], "/{$search_base}/" ) === false ) {
+        wp_redirect( home_url( "/collections/" . urlencode( get_query_var( 's' ) ) ) );
+        exit();
+    }
+}*/
+
 ?>
+
 
