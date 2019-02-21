@@ -7,11 +7,7 @@ get_header(); ?>
 
 	<article class="template-content furn">
 	
-		<div class="row nopaddtop">
-
-			
-	
-			
+		<div class="row">
 
 			<div class="slick-carousel-gallery">
 				<?php
@@ -25,9 +21,9 @@ get_header(); ?>
 				<?php $i++; } ?>
 			</div>
 
-			<div class="row">
+			<!-- <div class="row">
 				
-				<!-- <div class="carousel-block furn">
+				<div class="carousel-block furn">
 					<div class="vh-carousel" frameWidth="100" easing="ease" durationInSeconds="1" type="crossfade">
 						<?php
 							$frames = get_field('furniture_gallery');
@@ -50,12 +46,12 @@ get_header(); ?>
 							</div>
 						<?php $i++; } ?>
 					</div>
-				</div> -->
+				</div>
 
 				
 
 				
-				<!-- <div class="carousel-block rug">
+				<div class="carousel-block rug">
 					<div class="vh-carousel" frameWidth="100" easing="ease" durationInSeconds="1" type="crossfade">
 						<?php
 							$frames = get_field('rug_gallery');
@@ -78,13 +74,13 @@ get_header(); ?>
 							</div>
 						<?php } ?>
 					</div>
-				</div> -->
+				</div>
 				
-			</div>
+			</div> -->
 			
 		</div>
 	
-		<div class="row">
+		<!-- <div class="row">
 			
 			<?php
 				if($frames != 0) {
@@ -108,7 +104,7 @@ get_header(); ?>
 			
 			
 		</div>
-
+ -->
 	
 		<div class="row">
 			

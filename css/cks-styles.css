@@ -7,7 +7,7 @@
  ---------------------------*/
 
 .parent-pageid-13 .wrapper .main-content .template-content {
-  margin-top: 125px;
+  /*margin-top: 125px;*/
 }
 
 
@@ -99,7 +99,7 @@ div[filter="textiles"] .category-item.textiles {
  * Slider Customizations
  ----------------------------------*/
 
-.vh-carousel-btn {
+/*.vh-carousel-btn {
     position: absolute!important;
     top: 50%!important;
     transform: perspective(1px) translateY(-50%)!important;
@@ -125,7 +125,7 @@ div[filter="textiles"] .category-item.textiles {
 .vh-carousel-btn.vh-carousel-btn-r {
     right: 0!important;
     left: initial!important;
-}
+}*/
 
 
 /* Collections homepage product category grid layout update */
@@ -239,4 +239,63 @@ h1.search-page-title {
 .product-search {
     text-align: center;
     margin: 30px 0;
+}
+
+/*----------------------------------
+ * SLICK Carousel Customizations
+ ----------------------------------*/
+
+.slick-slide img {
+    width: 100%;
+}
+.slick-arrow {
+    z-index: 1;
+}
+
+button.slick-next.slick-arrow {
+    right: 0;
+    left: unset;
+}
+
+button.slick-prev.slick-arrow {
+    left: 0;
+    right: unset;
+}
+
+button.slick-arrow {
+  background-size: contain!important;
+  background-color: transparent;
+  height: 12%!important;
+  width: 3%!important;
+  min-width: 35px;
+  min-height: 50px;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+  transition: background-color .2s ease;
+  opacity: .8;
+}
+.slick-prev:before, .slick-next:before {
+  display: none!important;
+}
+.slick-slider:hover button.slick-arrow {
+  background-color: rgba(26, 26, 26, 0.34)!important;
+}
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+  background-color: rgba(26, 26, 26, 0.55)!important;
+}
+
+button.slick-next.slick-arrow {
+    background-image: url(http://www.victoriahagan.com/wp-content/themes/vh/images/vh-slider-arrow-dark-2-opt.png)!important;
+}
+button.slick-prev.slick-arrow {
+    background-image: url(http://www.victoriahagan.com/wp-content/themes/vh/images/vh-slider-arrow-dark-2-prev-opt.png)!important;
+}
+
+/* Dots */
+@media screen and (max-width: 700px) {
+  .slick-dots li {
+      width: 12px;
+      height: 12px;
+      margin: 0 3px;
+  }
 }

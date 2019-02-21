@@ -48,7 +48,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 		<script type="text/javascript">
-			jQuery('.slick-carousel-gallery').slick();
+			jQuery('.slick-carousel-gallery').slick({
+				dots: true,
+  				infinite: true
+			});
 		</script>
 	</body>
 		
