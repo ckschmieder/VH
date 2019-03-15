@@ -263,17 +263,34 @@ button.slick-prev.slick-arrow {
 }
 
 button.slick-arrow {
-  background-size: 75% 85%!important;
+  background-size: 70% 85px!important;
   background-color: transparent;
-  height: 20%!important;
-  width: 4%!important;
-  min-width: 35px;
-  min-height: 50px;
+  /*height: 20%!important;*/
+  width: 4.85%!important;
+  min-width: 30px;
+  /*min-height: 50px;*/
   background-repeat: no-repeat!important;
   background-position: center!important;
   transition: background-color .2s ease;
   opacity: .8;
   padding: 2px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+@media screen and (max-width: 660px) {
+  button.slick-arrow {
+    background-size: 70% 65px!important;
+  }
+}
+@media screen and (max-width: 460px) {
+  button.slick-arrow {
+    background-size: 75% 55px!important;
+  }
 }
 .slick-prev:before, .slick-next:before {
   display: none!important;
@@ -286,10 +303,10 @@ button.slick-arrow {
 }
 
 button.slick-next.slick-arrow {
-    background-image: url(http://www.victoriahagan.com/wp-content/themes/vh/images/vh-slider-arrow-dark-2-opt.png)!important;
+    background-image: url(http://www.victoriahagan.com/wp-content/themes/vh/images/amaz-slider-arrow-right.png)!important;
 }
 button.slick-prev.slick-arrow {
-    background-image: url(http://www.victoriahagan.com/wp-content/themes/vh/images/vh-slider-arrow-dark-2-prev-opt.png)!important;
+    background-image: url(http://www.victoriahagan.com/wp-content/themes/vh/images/amaz-slider-arrow-left.png)!important;
 }
 
 /* Dots */
