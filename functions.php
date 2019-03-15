@@ -24,7 +24,6 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );*/
 }
 add_action('wp_enqueue_scripts', 'load_my_script');*/
 
-
 function register_my_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }

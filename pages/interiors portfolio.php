@@ -23,7 +23,21 @@ get_header(); ?>
 					$images = get_field('images');
 					?>
 					<a id="port1"></a>
-						<div id="" class="carousel-block">
+
+					<div class="slick-slider-wrap">
+						<div class="portfolio-title text"><h2><?php the_title(); ?></h2></div>
+						<div class="slick-carousel-gallery">
+
+							<?php $it = 1; foreach ( $images as $image ) { ?>
+
+							<div class="slick-slide"><img src="<?php echo $image['sizes']['large']; ?>"></div>
+
+							<?php } ?>
+
+						</div>
+					</div>
+						
+						<!-- <div id="" class="carousel-block">
 							<div class="vh-carousel" frameWidth="100" easing="ease" durationInSeconds="1" type="crossfade">
 								<?php $it = 1; foreach ( $images as $image ) { ?>
 									<div image="<?php echo $image['sizes']['large']; ?>">
@@ -38,7 +52,7 @@ get_header(); ?>
 									</div>
 								<?php } ?>
 							</div>
-						</div>
+						</div> -->
 		
 			<?php if($portfolio_posts[1]){ ?>
 				
@@ -49,7 +63,23 @@ get_header(); ?>
 					?>
 				
 					<a id="port2" style="position: relative;top: -140px;z-index: -10;"><div></div></a>
-					<div class="carousel-block">
+					
+					<div class="slick-slider-wrap">
+						<div class="portfolio-title text"><h2><?php the_title(); ?></h2></div>
+						<div class="slick-carousel-gallery">
+
+							<?php $it = 1; foreach ( $images as $image ) { ?>
+
+							<div class="slick-slide"><img src="<?php echo $image['sizes']['large']; ?>"></div>
+
+							<?php } ?>
+
+						</div>
+					</div>
+
+					<!-- background-image: url("photographer.jpg"); -->
+
+					<!-- <div class="carousel-block">
 						<div class="vh-carousel" frameWidth="100" easing="ease" durationInSeconds="1" type="crossfade">
 							<?php $it = 1; foreach ( $images as $image ) { ?>
 								<div image="<?php echo $image['sizes']['large']; ?>">
@@ -64,7 +94,7 @@ get_header(); ?>
 								</div>
 							<?php } ?>
 						</div>
-					</div>
+					</div> -->
 			<?php } ?>
 			<?php if($portfolio_posts[2]){ ?>
 				
@@ -75,7 +105,22 @@ get_header(); ?>
 					?>
 				
 					<a id="port3" style="position: relative;top: -140px;z-index: -10;"><div></div></a>
-					<div class="carousel-block">
+					
+					<div class="slick-slider-wrap">
+						<div class="portfolio-title text"><h2><?php the_title(); ?></h2></div>
+
+						<div class="slick-carousel-gallery">
+
+							<?php $it = 1; foreach ( $images as $image ) { ?>
+
+							<div class="slick-slide"><img src="<?php echo $image['sizes']['large']; ?>"></div>
+
+							<?php } ?>
+
+						</div>
+					</div>
+
+					<!-- <div class="carousel-block">
 						<div class="vh-carousel" frameWidth="100" easing="ease" durationInSeconds="1" type="crossfade">
 							<?php $it = 1; foreach ( $images as $image ) { ?>
 								<div image="<?php echo $image['sizes']['large']; ?>">
@@ -90,7 +135,7 @@ get_header(); ?>
 								</div>
 							<?php } ?>
 						</div>
-					</div>
+					</div> -->
 			<?php } ?>
 			<?php if($portfolio_posts[3]){ ?>
 				
@@ -100,7 +145,20 @@ get_header(); ?>
 						$images = get_field('images');
 					?>
 				
-					<div class="carousel-block">
+					<div class="slick-slider-wrap">
+						<div class="portfolio-title text"><h2><?php the_title(); ?></h2></div>
+						<div class="slick-carousel-gallery">
+
+							<?php $it = 1; foreach ( $images as $image ) { ?>
+
+							<div class="slick-slide"><img src="<?php echo $image['sizes']['large']; ?>"></div>
+
+							<?php } ?>
+
+						</div>
+					</div>
+
+					<!-- <div class="carousel-block">
 						<div class="vh-carousel" frameWidth="100" easing="ease" durationInSeconds="1" type="crossfade">
 							<?php $it = 1; foreach ( $images as $image ) { ?>
 								<div image="<?php echo $image['sizes']['large']; ?>">
@@ -115,7 +173,7 @@ get_header(); ?>
 								</div>
 							<?php } ?>
 						</div>
-					</div>
+					</div> -->
 			<?php } ?>
 			
 		</div>

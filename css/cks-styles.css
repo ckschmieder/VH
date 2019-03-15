@@ -263,16 +263,17 @@ button.slick-prev.slick-arrow {
 }
 
 button.slick-arrow {
-  background-size: contain!important;
+  background-size: 75% 85%!important;
   background-color: transparent;
-  height: 12%!important;
-  width: 3%!important;
+  height: 20%!important;
+  width: 4%!important;
   min-width: 35px;
   min-height: 50px;
   background-repeat: no-repeat!important;
   background-position: center!important;
   transition: background-color .2s ease;
   opacity: .8;
+  padding: 2px;
 }
 .slick-prev:before, .slick-next:before {
   display: none!important;
@@ -280,7 +281,7 @@ button.slick-arrow {
 .slick-slider:hover button.slick-arrow {
   background-color: rgba(26, 26, 26, 0.34)!important;
 }
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+.slick-prev:hover, .slick-next:hover {
   background-color: rgba(26, 26, 26, 0.55)!important;
 }
 
@@ -299,3 +300,48 @@ button.slick-prev.slick-arrow {
       margin: 0 3px;
   }
 }
+
+/* Slick Carousel height */
+.slick-track {
+  height: 50vw;
+  max-height: 650px;
+}
+.slick-slider-wrap {
+    margin: 40px 0 80px;
+}
+
+.portfolio-title.text {
+    padding: .4em;
+    margin-bottom: .6em;
+}
+.portfolio-title.text h2 {
+    margin: 0!important;
+}
+
+/* Potentially new arrow */
+/* Needs the following added to init in JS
+
+nextArrow: '<i class="arrow right">',
+prevArrow: '<i class="arrow left">',
+
+ */
+
+/*i {
+  border: solid #000000;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 12px;
+  position: absolute;
+  top: calc(50% - 12px/2);
+  cursor: pointer;
+}
+.right {
+  right: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+  left: 20px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}*/
