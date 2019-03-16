@@ -20,6 +20,9 @@ get_header(); ?>
 	
 		<div class="row">
 			<!-- <div class="product-search">
+				<?php get_search_form(); ?>
+			</div> -->
+			<!-- <div class="product-search">
 				
 			</div> -->
 			
@@ -41,11 +44,68 @@ get_header(); ?>
 					<div class="textiles" value="textiles">Textiles</div>
 				</nav>
 
+
+				<!-- Search and Search Results -->
+				<div class="category-list display alph two">
+				
+				    <!-- <?php
+
+				    if( isset( $_REQUEST['search'] ) ){
+				        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				        $args = array(
+				            'paged'           => $paged,
+				            'posts_per_page'  => 16, //or any number
+				            'post_type'       => 'products', //or your custom post type if needed
+				            's'               => $_REQUEST[ 'search' ]
+				        );
+				    }
+
+				    // The Query
+				    $the_query = new WP_Query( $args );
+
+				    // The Loop
+				    if ( $the_query->have_posts() ) {
+				    	// echo '<ul>';
+				    	while ( $the_query->have_posts() ) {
+				    		$the_query->the_post();
+
+				    		?>
+				    		<div class="category-item <?php echo get_field('product_type'); ?>" data-id="<?php the_ID(); ?>">
+				    			<a href="<?php echo the_permalink(); ?>"><div class="image" style="background-image: url(<?php 
+				    				$images = get_field('product_images');
+				    				echo $images[0]['sizes']['medium'];
+				    			 ?>)"></div>
+				    			<p><?php the_title(); ?></p>
+				    			</a>
+				    		</div>
+				    		<?php
+				  
+
+
+				    	}
+				    	// echo '</ul>';
+				    	/* Restore original Post Data */
+				    	wp_reset_postdata();
+				    } else {
+				    	// no posts found
+				    	?>
+				    	<div>No products found. product template</div>					
+					    <?php
+				    }
+
+				    ?>
+
+				</div>
+				<div class="loading"></div> -->
+				<!-- END Search and Search Results -->
+
+
+
 				<!--<div class="category-list display rand"></div>-->
 				<div class="category-list furniture alph"></div>
-				<div class="loading"></div>
+				
 			</div>
-
+			<div class="loading"></div>
 
 			
 		</div>

@@ -3,7 +3,7 @@
  * default search form
  */
 ?>
-<form role="search" method="get" id="search-form" action="/">
+<form role="search" method="get" id="search-form" action="/collections/results">
     <div>
         <label class="screen-reader-text" for="s">Search for:</label>
         <input type="text" value="" name="s" id="s" />

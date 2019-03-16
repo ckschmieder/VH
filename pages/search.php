@@ -26,7 +26,7 @@ get_header(); ?>
 	        <?php if ( have_posts() ) : ?>
 	 
 	            <header class="page-header">
-	                <span class="search-page-title"><?php printf( esc_html__( 'Search Results for: %s', stackstar ), '<span>' . get_search_query() . '</span>' ); ?></span>
+	                <span class="search-page-title"><?php printf( esc_html__( 'Search Results for (search.php): %s', stackstar ), '<span>' . get_search_query() . '</span>' ); ?></span>
 	            </header><!-- .page-header -->
 	 
 	            <?php /* Start the Loop */ ?>

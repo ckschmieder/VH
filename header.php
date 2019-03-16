@@ -113,7 +113,7 @@ src="https://www.facebook.com/tr?id=190392041685677&ev=PageView
 
 				</header>
 				
-			<?php } else if ($post->post_parent == 13 || $post->post_type == "products" || $post->post_type == "vh_life"){ ?>
+			<?php } else if ($post->post_parent == 13 || $post->post_parent == 40 || $post->post_type == "products" || $post->post_type == "vh_life"){ ?>
 
 				<header class="header">
 				

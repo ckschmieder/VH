@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/application.php';
+// require __DIR__ . '/application.php';
 
 @ini_set( 'upload_max_size' , '8M' );
 @ini_set( 'post_max_size', '8M');

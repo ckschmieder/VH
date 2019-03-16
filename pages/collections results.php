@@ -1,6 +1,6 @@
 <?php 
 /**
- * The template for displaying product search results.
+ * Template Name: Collections results
  *
  */
 

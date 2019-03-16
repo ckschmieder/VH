@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Collections Product sresults
+ * Template Name: Collections psearch
  */
 
 get_header(); ?>
@@ -19,19 +19,69 @@ get_header(); ?>
 		</div>
 	
 		<div class="row">
-
+			<div class="product-search">
+				<?php get_search_form(); ?>
+			</div>
 			
 			<div class="category-block">
+				<!-- <div class="category-selector">category
+					<select>					  
+					  <option value="furniture">Furniture</option>
+					  <option value="textiles">Textiles</option>
+					  <option value="rugs">Rugs</option>
+					</select>
+				</div>
+ -->
+				<!-- <nav class="collections-product-nav" style="display:none;">
+					<ul>
+						<li>
+							<a class="" href="" cat="furniture">Furniture</a>
+						</li>
+						
+						<li>
+							<a class="" href="" cat="rugs">Rugs</a>
+						</li>
+						<li>
+							<a class="" href="" cat="textiles">Textiles</a>
+						</li>
+					</ul>
+				</nav> -->
 
+				<!--<div class="category-list display rand"></div>-->
+				<!-- <div class="category-list display alph">
+						
+						 
+					        <?php 
+					        if ( have_posts() ) : ?>
+					            
+					 
+					            <?php /* Start the Loop */ ?>
+					            <?php while ( have_posts() ) : the_post(); ?>
+					            
+					            <div class="category-item <?php echo get_field('product_type'); ?>" data-id="<?php the_ID(); ?>">
+					            	<a href="<?php echo the_permalink(); ?>"><div class="image" style="background-image: url(<?php 
+					            		$images = get_field('product_images');
+					            		echo $images[0]['sizes']['medium'];
+					            	 ?>)"></div>
+					            	<p><?php the_title(); ?></p>
+					            	</a>
+					            </div>
+					 
+					            <?php endwhile; ?>
+					 
+					            <?php //the_posts_navigation(); ?>
+					 
+					        <?php else : ?>
 
-				<nav class="collections-product-nav category-selector">
-					<div class="furniture" value="furniture">Furniture</div>
-					<div class="rugs" value="rugs">Rugs</div>
-					<div class="textiles" value="textiles">Textiles</div>
-				</nav>
+					        	<div>No products found.</div>
+					 
+					            <?php //get_template_part( 'template-parts/content', 'none' ); ?>
+					 
+					        <?php endif; ?>
 
+					   
+				</div> -->
 
-				<!-- Search and Search Results -->
 				<div class="category-list display alph two">
 				
 				    <?php
@@ -74,52 +124,12 @@ get_header(); ?>
 				    	wp_reset_postdata();
 				    } else {
 				    	// no posts found
-				    	?>
-				    	<div>No products found. collections-sresults template</div>					
-					    <?php
 				    }
 
 				    ?>
 
 				</div>
 				<div class="loading"></div>
-				<!-- END Search and Search Results -->
-
-
-
-				<!--<div class="category-list display rand"></div>-->
-
-				<!--<div class="category-list display rand"></div>-->
-				<!-- <div class="category-list furniture alph">
-					<?php 
-					if ( have_posts() ) : ?>
-					    
-					
-					    <?php /* Start the Loop */ ?>
-					    <?php while ( have_posts() ) : the_post(); ?>
-					    
-					    <div class="category-item <?php echo get_field('product_type'); ?>" data-id="<?php the_ID(); ?>">
-					    	<a href="<?php echo the_permalink(); ?>"><div class="image" style="background-image: url(<?php 
-					    		$images = get_field('product_images');
-					    		echo $images[0]['sizes']['medium'];
-					    	 ?>)"></div>
-					    	<p><?php the_title(); ?></p>
-					    	</a>
-					    </div>
-					
-					    <?php endwhile; ?>
-					
-					    <?php //the_posts_navigation(); ?>
-					
-					<?php else : ?>
-
-						<div>No products found. Sresults template</div>
-					
-					    <?php //get_template_part( 'template-parts/content', 'none' ); ?>
-					
-					<?php endif; ?>
-				</div> -->
-				
 			</div>
 
 
