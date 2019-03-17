@@ -12,11 +12,20 @@ var searchForm = productSearch.find("form");
 
 $(document).ready(function() {
   $('#product-search form').on('submit', function(e){
-    // validation code here
     e.preventDefault();
+    
     console.log("form submitted");
+    
     var term = $(".search-input").val();
     console.log(term);
+
+    /*$.ajax({
+    	url : ajax_url,
+    	term : term,
+    	success : function(response) {
+    		console.log(response);
+    	}
+    });*/
 
   });
 });

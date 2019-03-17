@@ -63,12 +63,17 @@ function product_search_callback() {
 
     header("Content-Type: application/json");
 
-    echo "test callback";
+    // echo "test callback";
+    // print_r($_GET);
+    // die();
+
+
+    $results = array();
 
     $args = array(
         "post_type" => "products",
-        "posts_per_page" => -1,
-        "s" => 'desk'
+        "posts_per_page" => -1
+        // "s" => 'desk'
     );
 
     /*$args['meta_query'][] = array(
