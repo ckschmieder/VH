@@ -68,11 +68,11 @@ function product_search_callback() {
     $args = array(
         "post_type" => "products",
         "posts_per_page" => -1,
-        "s" => 'table'
+        "s" => 'desk'
     );
 
     /*$args['meta_query'][] = array(
-        'key' => '',
+        'key' => 'product_type',
         'value' => '',
         'compare' => '='
     );*/
