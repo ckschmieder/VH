@@ -9,6 +9,8 @@
 
 add_theme_support( 'post-thumbnails' );
 
+
+
 /*function my_assets() {
     wp_enqueue_style( 'cks-styles', get_template_directory_uri() . '/css/cks-styles.css' );
 }
@@ -23,6 +25,86 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );*/
     wp_enqueue_script( 'slick-carousel' );
 }
 add_action('wp_enqueue_scripts', 'load_my_script');*/
+
+
+
+function product_search_scripts() {
+    wp_enqueue_script( 'product-search', get_stylesheet_directory_uri() . '/js/product-search.js', array( 'jquery' ), true );
+    wp_localize_script( 'product-search', 'ajax_url', admin_url('admin-ajax.php') );
+    // echo "<script>console.log('my custom_scripts function is working');</script>";
+}
+// add_action( 'wp_enqueue_scripts', 'product_search_scripts' );
+
+
+function product_search() {
+
+    product_search_scripts();
+
+    ob_start();
+    ?>
+    <div id="product-search">
+        <form action="" method="get" class="product-search-form">
+            <label for="product-search">Product Search</label>
+            <input class="search-input" type="text" name="product-search" />
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+add_shortcode( 'product_search', 'product_search' );
+
+add_action( 'wp_ajax_product_search', 'product_search_callback' );
+add_action( 'wp_ajax_nopriv_product_search', 'product_search_callback' );
+
+// http://vhcollections.com/wp-admin/admin-ajax.php?action=product_search
+
+function product_search_callback() {
+
+    header("Content-Type: application/json");
+
+    echo "test callback";
+
+    $args = array(
+        "post_type" => "products",
+        "posts_per_page" => -1,
+        "s" => 'table'
+    );
+
+    /*$args['meta_query'][] = array(
+        'key' => '',
+        'value' => '',
+        'compare' => '='
+    );*/
+
+    $product_query = new WP_Query( $args );
+
+    while( $product_query->have_posts() ) {
+
+        $product_query->the_post();
+
+        $result[] = array(
+            "id" => get_the_ID(),
+            "title" => get_the_title(),
+            "permalink" => get_permalink()
+        );
+
+        // echo "<li>" . get_the_title() . "</li>";
+    }
+
+    echo json_encode($result);
+
+    wp_die();
+}
+
+/*function product_search_scripts() {
+  echo "<script>console.log('my test function is working');</script>";
+  wp_localize_script( 'product-search', 'ajax_object', admin_url('admin-ajax.php') );
+}*/
+
+
+
+add_action( 'init', 'product_search_scripts' );
 
 function register_my_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));

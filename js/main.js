@@ -5089,7 +5089,12 @@ window[GLOBAL_NAMESPACE] = {}, window[GLOBAL_NAMESPACE].scrollable = [], window[
 var map, markers = [],
     infowindows = [];
 
-      
+
+console.log("this is the main script file");
+
+// $ = jQuery;
+
+// console.log($);
 
 
 

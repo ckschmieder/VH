@@ -57,7 +57,7 @@
 		<script>
 			CONTENT = "<?php echo WP_CONTENT_URL; ?>";
 		</script>
-
+		<?php wp_head(); ?>
 	</head>
 
 	<body <?php body_class(); ?>
