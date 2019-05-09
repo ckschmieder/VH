@@ -71,9 +71,11 @@ function product_search_callback() {
     $results = array();
 
     $args = array(
-        "post_type" => "products",
-        "posts_per_page" => -1
-        // "s" => 'desk'
+        'post_type'              => array( 'products' ),
+        'post_status'            => array( 'publish' ),
+        's'                      => 'desk',
+        'nopaging'               => true,
+        'posts_per_page'         => '-1',
     );
 
     /*$args['meta_query'][] = array(
