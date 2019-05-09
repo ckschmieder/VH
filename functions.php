@@ -28,15 +28,15 @@ add_action('wp_enqueue_scripts', 'load_my_script');*/
 
 
 
-function product_search_scripts() {
+/*function product_search_scripts() {
     wp_enqueue_script( 'product-search', get_stylesheet_directory_uri() . '/js/product-search.js', array( 'jquery' ), true );
     wp_localize_script( 'product-search', 'ajax_url', admin_url('admin-ajax.php') );
     // echo "<script>console.log('my custom_scripts function is working');</script>";
-}
+}*/
 // add_action( 'wp_enqueue_scripts', 'product_search_scripts' );
 
 
-function product_search() {
+/*function product_search() {
 
     product_search_scripts();
 
@@ -55,11 +55,11 @@ function product_search() {
 add_shortcode( 'product_search', 'product_search' );
 
 add_action( 'wp_ajax_product_search', 'product_search_callback' );
-add_action( 'wp_ajax_nopriv_product_search', 'product_search_callback' );
+add_action( 'wp_ajax_nopriv_product_search', 'product_search_callback' );*/
 
 // http://vhcollections.com/wp-admin/admin-ajax.php?action=product_search
 
-function product_search_callback() {
+/*function product_search_callback() {
 
     header("Content-Type: application/json");
 
@@ -78,11 +78,11 @@ function product_search_callback() {
         'posts_per_page'         => '-1',
     );
 
-    /*$args['meta_query'][] = array(
-        'key' => 'product_type',
-        'value' => '',
-        'compare' => '='
-    );*/
+    // $args['meta_query'][] = array(
+    //     'key' => 'product_type',
+    //     'value' => '',
+    //     'compare' => '='
+    // );
 
     $product_query = new WP_Query( $args );
 
@@ -104,14 +104,13 @@ function product_search_callback() {
     wp_die();
 }
 
-/*function product_search_scripts() {
-  echo "<script>console.log('my test function is working');</script>";
-  wp_localize_script( 'product-search', 'ajax_object', admin_url('admin-ajax.php') );
-}*/
+// function product_search_scripts() {
+//   echo "<script>console.log('my test function is working');</script>";
+//   wp_localize_script( 'product-search', 'ajax_object', admin_url('admin-ajax.php') );
+// }
 
+add_action( 'init', 'product_search_scripts' );*/
 
-
-add_action( 'init', 'product_search_scripts' );
 
 function register_my_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
